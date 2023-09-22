@@ -1,0 +1,23 @@
+primero ejecutamos
+
+nest g co passengers
+nest g s passengers
+nest g mo passengers
+
+creamos la carpeta DTO y dentro de ella el archivo x-y.dto.ts
+creamos en la carpeta interfaces y dentro de ella el archivo x-y.interface.ts
+vamos a models y creamos el nuevo model
+
+creamos la carpeta schema y creamos el modelo
+
+finalmente vamos a module
+importamos MongooseModule y hacemos un webeo
+
+-----------------------------------------------------------------------
+
+ponemos nombre al endpoint en @CONTROLLER('nombre_endpoint')
+
+luego los nombres de los controladores (create , findall, etc)
+return this.usersService.update(id, userDto);
+
+luego se crea en service el nombre del metodo en y se hace la logica
