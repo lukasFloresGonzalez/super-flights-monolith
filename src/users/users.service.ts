@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { HttpStatus, Injectable } from '@nestjs/common';
 import { UsersDto } from './dto/users.dto';
 import { IUsers } from '../common/interface/users.interface';
 import * as bcrypt from 'bcrypt';
@@ -34,7 +34,11 @@ export class UsersService {
     return await this.model.findByIdAndUpdate(id, user, { new: true });
   }
 
-  async delete(id: string): Promise<IUsers> {
-    return await this.model.findByIdAndDelete(id);
+  async delete(id: string) {
+    await this.model.findByIdAndDelete(id);
+    return {
+      status: HttpStatus.OK,
+      message: 'Deleted successfully',
+    };
   }
 }
